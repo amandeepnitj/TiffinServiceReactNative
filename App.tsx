@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import SignUp from './src/components/SignUp';
 import LoginPage from './src/components/LoginPage';
 import Forgotpassword from './src/components/Forgotpassword';
+import WelcomePage from './src/components/WelcomePage';
 export default function App() {
   return (
     // <View style={styles.container}>
@@ -14,7 +15,8 @@ export default function App() {
     // <Layoutone/>
     // <SignUp></SignUp>
     // <LoginPage></LoginPage>
-    <Forgotpassword></Forgotpassword>
+    // <Forgotpassword></Forgotpassword>
+    <WelcomePage></WelcomePage>
   );
 }
 
