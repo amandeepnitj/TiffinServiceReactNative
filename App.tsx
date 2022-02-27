@@ -5,20 +5,22 @@ import LoginPage from './src/components/LoginPage';
 import Forgotpassword from './src/components/Forgotpassword';
 import WelcomePage from './src/components/WelcomePage';
 import UserProfile from './src/components/UserProfile';
+import HomePage from './src/HomePage';
 export default function App() {
   return (
     //<View style={styles.container}>
     //<Header></Header>
     //<WelcomePage/>
       
-    //</View>
-    //<FlexBoxTry/>
-    //<Layoutone/>
-    //<SignUp></SignUp>
-    //<LoginPage></LoginPage>
-    //<Forgotpassword></Forgotpassword>
-    <UserProfile></UserProfile>
-    //<WelcomePage></WelcomePage>
+    // </View>
+    // <FlexBoxTry/>
+    // <Layoutone/>
+    // <SignUp></SignUp>
+    // <LoginPage></LoginPage>
+    // <Forgotpassword></Forgotpassword>
+    // <HomePage></HomePage>
+    //<UserProfile></UserProfile>
+    <WelcomePage></WelcomePage>
   );
 }
 
