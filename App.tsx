@@ -4,6 +4,7 @@ import SignUp from './src/components/SignUp';
 import LoginPage from './src/components/LoginPage';
 import Forgotpassword from './src/components/Forgotpassword';
 import WelcomePage from './src/components/WelcomePage';
+import HomePage from './src/HomePage';
 export default function App() {
   return (
     // <View style={styles.container}>
@@ -16,6 +17,7 @@ export default function App() {
     // <SignUp></SignUp>
     // <LoginPage></LoginPage>
     // <Forgotpassword></Forgotpassword>
+    // <HomePage></HomePage>
     <WelcomePage></WelcomePage>
   );
 }
