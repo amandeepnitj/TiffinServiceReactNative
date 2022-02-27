@@ -4,12 +4,13 @@ import SignUp from './src/components/SignUp';
 import LoginPage from './src/components/LoginPage';
 import Forgotpassword from './src/components/Forgotpassword';
 import WelcomePage from './src/components/WelcomePage';
+import UserProfile from './src/components/UserProfile';
 import HomePage from './src/HomePage';
 export default function App() {
   return (
-    // <View style={styles.container}>
-    //   <Header></Header>
-    //   <WelcomePage/>
+    //<View style={styles.container}>
+    //<Header></Header>
+    //<WelcomePage/>
       
     // </View>
     // <FlexBoxTry/>
@@ -18,6 +19,7 @@ export default function App() {
     // <LoginPage></LoginPage>
     // <Forgotpassword></Forgotpassword>
     // <HomePage></HomePage>
+    //<UserProfile></UserProfile>
     <WelcomePage></WelcomePage>
   );
 }
@@ -30,10 +32,9 @@ const styles = StyleSheet.create({
   },
   Header:{
     flex:1
-  }
-  ,
+  },
   WelcomePage:
   {
     flex:2
-  }
+  },
 });
