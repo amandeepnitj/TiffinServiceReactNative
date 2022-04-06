@@ -1,6 +1,11 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import { View,StyleSheet,Image} from "react-native";
-const WelcomePage = ()=>{
+function WelcomePage({navigation}){   
+
+    setTimeout(()=>{
+        navigation.replace("Login");
+    },5000);
 
     const {wrapper} = styles
 

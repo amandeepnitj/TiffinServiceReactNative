@@ -1,7 +1,7 @@
 import React from "react";
 import {Image,TouchableOpacity, Pressable,Alert,Text, SafeAreaView, StyleSheet, View, ScrollView, TextInput} from "react-native";
 
-function UserProfile()
+function UserProfile({navigation})
 {
     return(
         <SafeAreaView style={styles.wrapper}>
@@ -20,12 +20,12 @@ function UserProfile()
                 <TextInput style={styles.textInputs} placeholder="Email" underlineColorAndroid={'transparent'}></TextInput>
                 </View>
                 <View style={styles.lowerportion}>
-                <Pressable style={styles.savebutton} onPress={()=>Alert.alert('save pressed')}>
+                <TouchableOpacity style={styles.savebutton} onPress={()=>{navigation.goBack()}}>
                 <Text style={styles.buttontext}>Save</Text>
-                </Pressable>
-                <Pressable style={styles.cancelbutton} onPress={()=>Alert.alert('Cancel pressed')}>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.cancelbutton} onPress={()=>{navigation.goBack()}}>
                 <Text style={styles.buttontext}>Cancel</Text>
-                </Pressable>
+                </TouchableOpacity>
                 </View>
                 
             </View>

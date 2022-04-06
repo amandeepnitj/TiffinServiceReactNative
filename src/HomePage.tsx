@@ -9,10 +9,11 @@ import {
     FlatList,
     SafeAreaView,
     Platform,
-    StatusBar
+    StatusBar,
+    TouchableOpacity
 } from "react-native";
 
-const HomePage = () => {
+const HomePage = ({navigation}) => {
     return (
         <SafeAreaView style={styles.container}>
             <FlatList
@@ -23,15 +24,17 @@ const HomePage = () => {
                                 <Text style={styles.greeting}>Hello there</Text>
                                 <Text style={styles.name}>Tiffany</Text>
                             </View>
-                            <View style={styles.avatarContainer}>
+                            <TouchableOpacity onPress={()=>{navigation.navigate("UserProfile")}}>
+                            <View style={styles.avatarContainer} >
                                 <Image
                                     source={{
                                         uri:
                                             'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
                                     }}
-                                    style={styles.avatarImage}
+                                    style={styles.avatarImage} 
                                 />
                             </View>
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.imgContainer}>
                             <Image style={styles.img} source={{ uri: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60' }} />

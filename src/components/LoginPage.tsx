@@ -1,4 +1,5 @@
 import React from "react";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import {
   StyleSheet,
@@ -11,8 +12,15 @@ import {
   Platform,
   SafeAreaView,
 } from "react-native";
- 
-const LoginPage =()=> {
+import SignUp from "./SignUp";
+import Forgotpassword from "./Forgotpassword";
+import UserProfile from "./UserProfile";
+import HomePage from "../HomePage";
+import Card from "./Card";
+import WelcomePage from "./WelcomePage";
+
+const Stack = createNativeStackNavigator();
+const LoginPage_1 =({navigation})=> {
  
  
   return (
@@ -40,19 +48,36 @@ const LoginPage =()=> {
                   secureTextEntry={true} />
           </View>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>{navigation.navigate("ForgotPassword")}}>
               <Text style={styles.ForgotPassword}>Forgot Password?</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.lgnBtn}>
+          <TouchableOpacity style={styles.lgnBtn} onPress={()=>{navigation.navigate("HomePage")}}>
               <Text style={styles.lgnText}>LOGIN</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>{navigation.navigate("SignUp")}}>
           <Text style = {styles.NewUser}> New User? Sign Up</Text>
           </TouchableOpacity>
 
           </SafeAreaView>
   );
+}
+
+function LoginPage()
+{
+  return(
+    <Stack.Navigator
+    initialRouteName="WelcomePage">
+        <Stack.Screen name ='Login' component={LoginPage_1} options={{title:"Login"}}/>
+        <Stack.Screen name ='SignUp' component={SignUp} options={{title:"Sign Up"}}/>
+        <Stack.Screen name ='ForgotPassword' component={Forgotpassword} options={{title:"Forgot Password"}}/>
+        <Stack.Screen name ='UserProfile' component={UserProfile} options={{title:"User Profile"}}/>
+        <Stack.Screen name ='HomePage' component={HomePage} options={{title:" Home "}}/>
+        <Stack.Screen name ='WelcomePage' component={WelcomePage} options={{title:" Welcome "}}/>
+        
+
+    </Stack.Navigator>
+  )
 }
  
 const styles = StyleSheet.create({

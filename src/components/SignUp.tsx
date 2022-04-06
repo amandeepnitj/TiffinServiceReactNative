@@ -1,7 +1,7 @@
 import React from "react";
 import {Image,TouchableOpacity, Pressable,Alert,Text, SafeAreaView, StyleSheet, View, ScrollView, TextInput} from "react-native";
 
-function SignUp()
+function SignUp({navigation})
 {
     return(
         <SafeAreaView style={styles.wrapper}>
@@ -24,15 +24,15 @@ function SignUp()
                 <TextInput style={styles.textInputs} placeholder="City" underlineColorAndroid={'transparent'}></TextInput>
                 <TextInput style={styles.textInputs} placeholder="Province" underlineColorAndroid={'transparent'}></TextInput>
                 <TextInput style={styles.textInputs} placeholder="Country" underlineColorAndroid={'transparent'}></TextInput>
-                <Pressable style={styles.buttons} onPress={()=>Alert.alert('submit pressed')}>
+                <Pressable style={styles.buttons} onPress={()=>{navigation.navigate("HomePage")}}>
                 <Text style={styles.buttontext}>Submit</Text>
                 </Pressable>
-                <Pressable style={styles.buttons} onPress={()=>Alert.alert('Cancel pressed')}>
+                <Pressable style={styles.buttons} onPress={()=>{navigation.goBack()}}>
                 <Text style={styles.buttontext}>Cancel</Text>
                 </Pressable>
                 <View style={styles.alreadyaccountview}>
                 <Text>Already have an account? </Text>
-                <Text style={styles.loginlink} onPress={()=>Alert.alert('Login link pressed')}>Log In</Text>
+                <Text style={styles.loginlink} onPress={()=>{navigation.navigate("LoginPage_1")}}>Log In</Text>
 
                 </View>
                 

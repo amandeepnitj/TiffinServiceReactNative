@@ -1,7 +1,7 @@
 import React from "react";
 import {Image,TouchableOpacity, Pressable,Alert,Text, SafeAreaView, StyleSheet, View, ScrollView, TextInput} from "react-native";
 
-function Forgotpassword()
+function Forgotpassword({navigation})
 {
     return(
         <SafeAreaView style={styles.wrapper}>
@@ -16,12 +16,12 @@ function Forgotpassword()
                 <TextInput style={styles.textInputs} placeholder="Email Address" underlineColorAndroid={'transparent'}></TextInput>
                 </View>
                 <View style={styles.lowerportion}>
-                <Pressable style={styles.submitbutton} onPress={()=>Alert.alert('submit pressed')}>
+                <TouchableOpacity style={styles.submitbutton} onPress={()=>{navigation.navigate("LoginPage_1")}}>
                 <Text style={styles.buttontext}>Submit</Text>
-                </Pressable>
-                <Pressable style={styles.cancelbutton} onPress={()=>Alert.alert('Cancel pressed')}>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.cancelbutton} onPress={()=>{navigation.goBack()}}>
                 <Text style={styles.buttontext}>Cancel</Text>
-                </Pressable>
+                </TouchableOpacity>
                 </View>
                 
             </View>
