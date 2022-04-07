@@ -5,7 +5,7 @@ function WelcomePage({navigation}){
 
     setTimeout(()=>{
         navigation.replace("Login");
-    },10000);
+    },5000);
 
     const {wrapper} = styles
 
