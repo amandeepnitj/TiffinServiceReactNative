@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component, useState } from "react";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import {
@@ -20,8 +20,12 @@ import Card from "./Card";
 import WelcomePage from "./WelcomePage";
 
 const Stack = createNativeStackNavigator();
-const LoginPage_1 =({navigation})=> {
- 
+const LoginPage_1 = ({navigation})=>{
+   const [username,setUsername] = useState('');
+
+
+
+
  
   return (
       
@@ -36,8 +40,10 @@ const LoginPage_1 =({navigation})=> {
           <View style={styles.textbox}>
               <TextInput
                   style={styles.TextInput}
-                  placeholder="Enter email address"
-                  placeholderTextColor="black" />
+                  placeholder="Enter UserName"
+                  placeholderTextColor="black"
+                  onChangeText={(value) => setUsername(value)} 
+                  />
           </View>
          
           <View style={styles.textbox}>
@@ -45,14 +51,17 @@ const LoginPage_1 =({navigation})=> {
                   style={styles.TextInput}
                   placeholder="Enter Password"
                   placeholderTextColor="black"
-                  secureTextEntry={true} />
+                  secureTextEntry={true}
+                   />
           </View>
 
           <TouchableOpacity onPress={()=>{navigation.navigate("ForgotPassword")}}>
               <Text style={styles.ForgotPassword}>Forgot Password?</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.lgnBtn} onPress={()=>{navigation.navigate("HomePage")}}>
+          <TouchableOpacity style={styles.lgnBtn} onPress={()=>{navigation.navigate("HomePage",{
+            username1 :username,
+          })}}>
               <Text style={styles.lgnText}>LOGIN</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={()=>{navigation.navigate("SignUp")}}>
@@ -60,7 +69,9 @@ const LoginPage_1 =({navigation})=> {
           </TouchableOpacity>
 
           </SafeAreaView>
+  
   );
+  
 }
 
 function LoginPage()

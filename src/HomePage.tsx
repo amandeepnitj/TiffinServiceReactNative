@@ -13,7 +13,8 @@ import {
     TouchableOpacity
 } from "react-native";
 
-const HomePage = ({navigation}) => {
+const HomePage = ({route,navigation}) => {
+    const {username1} =route.params
     return (
         <SafeAreaView style={styles.container}>
             <FlatList
@@ -22,9 +23,12 @@ const HomePage = ({navigation}) => {
                         <View style={[styles.itemHoriz]}>
                             <View>
                                 <Text style={styles.greeting}>Hello there</Text>
-                                <Text style={styles.name}>Tiffany</Text>
+                                <Text style={styles.name}>{username1}</Text>
                             </View>
-                            <TouchableOpacity onPress={()=>{navigation.navigate("UserProfile")}}>
+                            <TouchableOpacity onPress={()=>{navigation.navigate("UserProfile",
+                            {
+                                username1: username1
+                            })}}>
                             <View style={styles.avatarContainer} >
                                 <Image
                                     source={{

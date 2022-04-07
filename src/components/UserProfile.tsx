@@ -1,8 +1,9 @@
 import React from "react";
 import {Image,TouchableOpacity, Pressable,Alert,Text, SafeAreaView, StyleSheet, View, ScrollView, TextInput} from "react-native";
 
-function UserProfile({navigation})
+function UserProfile({route,navigation})
 {
+    const {username1} =  route.params
     return(
         <SafeAreaView style={styles.wrapper}>
             {/* <Text style={styles.backbutton}>Go Back</Text> */}
@@ -12,7 +13,7 @@ function UserProfile({navigation})
         <Image source={require('./../../images/icon-account.png')} style={styles.userprofileicon}/>
             <View style={styles.mainview}>
                 <View style={styles.upperportion}>
-                <Text style={styles.yourprofiletext}>Your Profile</Text>
+                <Text style={styles.yourprofiletext}>{username1}'s Profile</Text>
                 <TextInput style={styles.textInputs} placeholder="Name" underlineColorAndroid={'transparent'}></TextInput>
                 <TextInput style={styles.textInputs} placeholder="Gender" underlineColorAndroid={'transparent'}></TextInput>
                 <TextInput style={styles.textInputs} placeholder="Date Of Birth" underlineColorAndroid={'transparent'}></TextInput>
