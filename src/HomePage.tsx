@@ -25,10 +25,7 @@ const HomePage = ({route,navigation}) => {
                                 <Text style={styles.greeting}>Hello there</Text>
                                 <Text style={styles.name}>{username1}</Text>
                             </View>
-                            <TouchableOpacity onPress={()=>{navigation.navigate("UserProfile",
-                            {
-                                username1: username1
-                            })}}>
+                            <TouchableOpacity onPress={()=>{navigation.navigate("Drawer")}}>
                             <View style={styles.avatarContainer} >
                                 <Image
                                     source={{

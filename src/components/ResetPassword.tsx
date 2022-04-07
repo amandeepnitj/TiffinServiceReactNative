@@ -1,34 +1,30 @@
 import React from "react";
 import {Image,TouchableOpacity, Pressable,Alert,Text, SafeAreaView, StyleSheet, View, ScrollView, TextInput} from "react-native";
 
-function UserProfile()
+function ResetPassword()
 {
-    //const {username1} =  route.params
     return(
         <SafeAreaView style={styles.wrapper}>
             {/* <Text style={styles.backbutton}>Go Back</Text> */}
             
-        <Image source={require('./../../images/icon-account.png')} style={styles.userprofileicon}/>
             <View style={styles.mainview}>
                 <View style={styles.upperportion}>
-                <Text style={styles.yourprofiletext}>User Profile</Text>
-                <TextInput style={styles.textInputs} placeholder="Name" underlineColorAndroid={'transparent'}></TextInput>
-                <TextInput style={styles.textInputs} placeholder="Gender" underlineColorAndroid={'transparent'}></TextInput>
-                <TextInput style={styles.textInputs} placeholder="Date Of Birth" underlineColorAndroid={'transparent'}></TextInput>
-                <TextInput style={styles.textInputs} placeholder="Phone" underlineColorAndroid={'transparent'}></TextInput>
-                <TextInput style={styles.textInputs} placeholder="Email" underlineColorAndroid={'transparent'}></TextInput>
+                <Text style={styles.forgottext}>Reset Password</Text>
+                <Text style={styles.forgotdescription}>Please enter your email address to send reset password mail</Text>
+                <TextInput style={styles.textInputs} placeholder="Email Address" underlineColorAndroid={'transparent'}></TextInput>
                 </View>
                 <View style={styles.lowerportion}>
-                <TouchableOpacity style={styles.savebutton} onPress={()=>{console.log("hi")}}>
-                <Text style={styles.buttontext}>Save</Text>
+                <TouchableOpacity style={styles.submitbutton} onPress={()=>console.log("submit button touched")}>
+                <Text style={styles.buttontext}>Submit</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.cancelbutton} onPress={()=>{console.log("hi")}}>
+                <TouchableOpacity style={styles.cancelbutton} onPress={()=>console.log("back button touched")}>
                 <Text style={styles.buttontext}>Cancel</Text>
                 </TouchableOpacity>
                 </View>
                 
             </View>
             
+
         </SafeAreaView>
     )
 }
@@ -44,23 +40,17 @@ const styles = StyleSheet.create(
             marginRight:15
         },
         backbutton:{
-            marginTop:50,
+            // flex:0.06,
             height:20,
             width:20,
-        },    
-        userprofileicon:{
-            marginLeft: 320,
-            marginTop: 10,
-            //alignSelf: 'flex-end',
-            height:60,
-            width: 60,
         },
         mainview:{
             flex:10,
             // backgroundColor:'skyblue'
         },
         upperportion:{
-          flex:1,      
+          flex:1,
+          
         },
         lowerportion:{
           flex:1,
@@ -68,13 +58,19 @@ const styles = StyleSheet.create(
           justifyContent:'flex-end',
           marginBottom:50
         },
-        yourprofiletext:{
+        forgottext:{
             fontSize:40,
             color:'green',
             fontWeight:'300',
             backgroundColor:'white',
-            marginTop:20,
-            marginBottom:60,
+            marginTop:5,
+            marginBottom:5
+        },
+        forgotdescription:{
+            marginTop:5,
+            marginBottom:50,
+            fontSize:20,
+            backgroundColor:'white',
         },
         textInputs:{
             borderBottomColor:'grey',
@@ -83,7 +79,9 @@ const styles = StyleSheet.create(
             // marginLeft:10,
             marginBottom:30
         },
-        savebutton: {
+        
+        
+        submitbutton: {
             alignItems: 'center',
             justifyContent: 'center',
             paddingVertical: 12,
@@ -92,8 +90,8 @@ const styles = StyleSheet.create(
             elevation: 3,
             backgroundColor: 'green',
             marginBottom:15
-        },
-        cancelbutton:{
+          },
+          cancelbutton:{
             alignItems: 'center',
             justifyContent: 'center',
             paddingVertical: 12,
@@ -102,16 +100,18 @@ const styles = StyleSheet.create(
             elevation: 3,
             backgroundColor: 'grey',
             marginBottom:15
-        },
-        buttontext: {
+          },
+          buttontext: {
             fontSize: 16,
             lineHeight: 21,
             // fontWeight: 'bold',
             letterSpacing: 0.25,
             color: 'white',
-        },
-        
+          },
+          
+
     }
 )
 
-export default UserProfile;
+
+export default ResetPassword;

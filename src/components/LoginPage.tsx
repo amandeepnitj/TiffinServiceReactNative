@@ -18,9 +18,10 @@ import UserProfile from "./UserProfile";
 import HomePage from "../HomePage";
 import Card from "./Card";
 import WelcomePage from "./WelcomePage";
+import Drawers from "./Drawers";
 
 const Stack = createNativeStackNavigator();
-const LoginPage_1 = ({navigation})=>{
+export const LoginPage_1 = ({navigation})=>{
    const [username,setUsername] = useState('');
 
 
@@ -82,9 +83,11 @@ function LoginPage()
         <Stack.Screen name ='Login' component={LoginPage_1} options={{title:"Login"}}/>
         <Stack.Screen name ='SignUp' component={SignUp} options={{title:"Sign Up"}}/>
         <Stack.Screen name ='ForgotPassword' component={Forgotpassword} options={{title:"Forgot Password"}}/>
-        <Stack.Screen name ='UserProfile' component={UserProfile} options={{title:"User Profile"}}/>
+        {/* <Stack.Screen name ='UserProfile' component={UserProfile} options={{title:"User Profile"}}/> */}
         <Stack.Screen name ='HomePage' component={HomePage} options={{title:" Home "}}/>
+        <Stack.Screen name ='Drawer' component={Drawers} options={{title:" Home Screen "}}/>
         <Stack.Screen name ='WelcomePage' component={WelcomePage} options={{title:" Welcome "}}/>
+
         
 
     </Stack.Navigator>
