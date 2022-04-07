@@ -66,7 +66,7 @@ const styles = StyleSheet.create(
             fontSize:30,
             color:'green',
             fontWeight:'bold',
-            backgroundColor:'white',
+           
             marginTop:5,
             marginBottom:5
         },
@@ -74,7 +74,7 @@ const styles = StyleSheet.create(
             marginTop:5,
             marginBottom:35,
             fontSize:15,
-            backgroundColor:'white',
+            
         },
         textInputs:{
             borderBottomColor:'grey',
@@ -88,7 +88,7 @@ const styles = StyleSheet.create(
             marginTop:5,
             marginBottom:25,
             fontSize:18,
-            backgroundColor:'white',
+           
             // fontWeight:'bold'
 
         },

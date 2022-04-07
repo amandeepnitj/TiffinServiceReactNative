@@ -72,7 +72,7 @@ const styles = StyleSheet.create(
             fontSize:40,
             color:'green',
             fontWeight:'300',
-            backgroundColor:'white',
+           
             marginTop:20,
             marginBottom:60,
         },

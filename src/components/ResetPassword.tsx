@@ -62,7 +62,7 @@ const styles = StyleSheet.create(
             fontSize:40,
             color:'green',
             fontWeight:'300',
-            backgroundColor:'white',
+           
             marginTop:5,
             marginBottom:5
         },
@@ -70,7 +70,7 @@ const styles = StyleSheet.create(
             marginTop:5,
             marginBottom:50,
             fontSize:20,
-            backgroundColor:'white',
+            
         },
         textInputs:{
             borderBottomColor:'grey',
